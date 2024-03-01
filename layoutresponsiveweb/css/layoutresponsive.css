@@ -1,0 +1,349 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: blue;
+    padding: 1.5em;
+    margin-bottom: 1em;
+   
+    
+}
+
+/* clearfix overflow auto per risolvere dei bag che a volte il browser non riconosce l0altezza giusta */
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+} 
+
+header #logodiv {
+    width: 30%;
+    float: left;
+    
+}
+
+header #linguediv {
+    width: 70%;
+    float: left;
+    
+}
+
+
+header  #linguediv div {
+    display: inline;
+    float: right;
+}
+
+
+/* header  #logodiv div div {
+    background-color: transparent;
+    padding: 0.9em 0;
+ } */
+
+header  #linguediv div div {
+   background-color: orange;
+   width: 3em;
+   height: 3em;
+   margin-right: 1em;
+   line-height: 3em;
+   text-align: center;
+}
+
+main {
+    margin-bottom: 1em;
+}
+
+article {
+    padding: 0.5em;
+    background-color: gray;
+    margin-bottom: 1em;   
+    
+}
+
+aside {
+    text-align: center;
+    background-color: pink;
+    padding: 0.5em;
+    margin-bottom: 1em;   
+    overflow: auto;
+
+}
+
+aside nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+aside nav ul li{
+    float: left;
+    width: calc(100% / 5);
+    
+}
+
+/* codice con object fit */
+
+aside nav ul li img {
+    width: 54px;
+    height: 54px;
+    object-fit: none;
+}
+
+aside nav ul li:nth-child(1) img {
+   object-position: 0 0;
+   transition: 0.3s;
+}
+
+aside nav ul li:nth-child(1) img:hover {
+    object-position: 0 -54px;
+}
+
+
+
+aside nav ul li:nth-child(2) img {
+    object-position: 0 -108px;
+    transition: 0.3s;
+}
+
+aside nav ul li:nth-child(2) img:hover {
+    object-position: 0 -162px;
+}
+
+
+
+aside nav ul li:nth-child(3) img {
+    object-position: 0 -216px;
+    transition: 0.3s;
+}
+
+aside nav ul li:nth-child(3) img:hover {
+    object-position: 0 -270px ;
+}
+
+
+
+aside nav ul li:nth-child(4) img {
+    object-position: 0 -324px;
+    transition: 0.3s;
+}
+
+aside nav ul li:nth-child(4) img:hover {
+    object-position: 0 -378px;
+}
+
+
+
+aside nav ul li:nth-child(5) img {
+    object-position: 0 -432px;
+    transition: 0.3s;
+}
+
+aside nav ul li:nth-child(5) img:hover {
+    object-position: 0 -486px;
+}
+
+
+
+
+
+
+
+
+section {
+    text-align: center;
+    background-color: fuchsia;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+main img {
+    width: 100%;
+}
+
+
+footer {
+    background-color: aqua;
+    padding: 1em;
+    clear: both;
+    margin-bottom: 3em;
+}
+
+footer ul {
+    margin: 0 ;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li{
+    float: left;
+    margin-right: .5em;
+    
+}
+
+footer ul li:last-child{
+    
+    margin-right: 0;
+    
+}
+
+footer::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+
+
+
+/* codice per stop and code due inserimento icone con css sprites */
+
+footer ul #oneicon {
+    width: 54px;
+    height: 54px;
+    background-image: url(/stopandcode2/sprite1.png);
+    background-position: 0 0;
+    transition: 0.3s; 
+    
+  
+    
+}
+
+footer ul #oneicon:hover {
+    background-position: 0 -54px;
+
+}
+
+
+footer ul #twoicon {
+    width: 54px;
+    height: 54px;
+    background-image: url(/stopandcode2/sprite1.png);
+    background-position: 0 -108px;
+    transition: .3s; 
+}
+
+footer ul #twoicon:hover {
+    background-position: 0 -162px;
+}
+
+
+footer ul #threeicon {
+    width: 54px;
+    height: 54px;
+    background-image: url(/stopandcode2/sprite1.png);
+    background-position: 0 -216px;
+    transition: .3s; 
+}
+
+footer ul #threeicon:hover {
+    background-position: 0 -270px;
+}
+
+
+footer ul #fouricon {
+    width: 54px;
+    height: 54px;
+    background-image: url(/stopandcode2/sprite1.png);
+    background-position: 0 -324px;
+    transition: .3s; 
+}
+
+footer ul #fouricon:hover {
+    background-position: 0 -378px;
+   
+}
+
+
+footer ul #fiveicon {
+    width: 54px;
+    height: 54px;
+    background-image: url(/stopandcode2/sprite1.png);
+    background-position: 0 -432px;
+    transition: .3s; 
+}
+
+footer ul #fiveicon:hover {
+    background-position: 0 -486px;
+}
+
+
+
+
+@media screen and (min-width: 600px) and (max-width: 1024px)
+{
+
+    aside {
+       width: 49%;
+       float: left;
+       margin-right: 1%;
+    }
+
+    section {
+        width: 49%;
+       float: right;
+       margin-left: 1%;  
+    }
+
+    footer {
+        clear: both;
+    }
+    
+}
+
+
+@media screen and (min-width:1025px)
+{
+
+
+    
+
+    body {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    
+    article {
+        width: 50%;
+        margin-bottom: 0.1em;
+        display: inline-block;
+        min-height: 500px; 
+    }
+
+    aside {
+        width: 23.5%;
+        float: left;
+        margin-right: 1.5%;
+        min-height: 500px; 
+     }
+
+    section {
+       width: 23.5%;
+       margin-left: 1.5%;
+       float: right;
+       min-height: 500px;     
+    }
+
+    footer {
+        margin-top: 1em;
+        clear: both;
+    }
+    
+    
+}

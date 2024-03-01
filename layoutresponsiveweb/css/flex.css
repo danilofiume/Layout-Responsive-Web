@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+
+
+}
+
+body > *{
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+header {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+
+article {
+    background-color: fuchsia;
+}
+
+aside{
+    background-color: blueviolet;
+    
+
+}
+
+aside nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* codice con object fit */
+
+aside nav ul li img {
+    width: 54px;
+    height: 54px;
+    object-fit: none;
+}
+
+aside nav ul li:nth-child(1) img {
+   object-position: 0 0;
+   transition: 0.3s;
+}
+
+aside nav ul li:nth-child(1) img:hover {
+    object-position: 0 -54px;
+}
+
+
+
+aside nav ul li:nth-child(2) img {
+    object-position: 0 -108px;
+    transition: 0.3s;
+}
+
+aside nav ul li:nth-child(2) img:hover {
+    object-position: 0 -162px;
+}
+
+
+
+aside nav ul li:nth-child(3) img {
+    object-position: 0 -216px;
+    transition: 0.3s;
+}
+
+aside nav ul li:nth-child(3) img:hover {
+    object-position: 0 -270px ;
+}
+
+
+
+aside nav ul li:nth-child(4) img {
+    object-position: 0 -324px;
+    transition: 0.3s;
+}
+
+aside nav ul li:nth-child(4) img:hover {
+    object-position: 0 -378px;
+}
+
+
+
+aside nav ul li:nth-child(5) img {
+    object-position: 0 -432px;
+    transition: 0.3s;
+}
+
+aside nav ul li:nth-child(5) img:hover {
+    object-position: 0 -486px;
+}
+
+
+
+
+
+
+section {
+    background-color: chartreuse;
+}
+
+footer {
+    background-color: red;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+  
+    margin-right: 1em;
+}
+
+
+footer ul li:last-child {
+  
+    margin-right: 0;
+}
+
+footer ul #oneicon {
+    width: 54px;
+    height: 54px;
+    background-image: url(/stopandcode2/sprite1.png);
+    background-position: 0 0;
+    transition: 0.3s; 
+    
+  
+    
+}
+
+footer ul #oneicon:hover {
+    background-position: 0 -54px;
+
+}
+
+
+footer ul #twoicon {
+    width: 54px;
+    height: 54px;
+    background-image: url(/stopandcode2/sprite1.png);
+    background-position: 0 -108px;
+    transition: .3s; 
+}
+
+footer ul #twoicon:hover {
+    background-position: 0 -162px;
+}
+
+
+footer ul #threeicon {
+    width: 54px;
+    height: 54px;
+    background-image: url(/stopandcode2/sprite1.png);
+    background-position: 0 -216px;
+    transition: .3s; 
+}
+
+footer ul #threeicon:hover {
+    background-position: 0 -270px;
+}
+
+
+footer ul #fouricon {
+    width: 54px;
+    height: 54px;
+    background-image: url(/stopandcode2/sprite1.png);
+    background-position: 0 -324px;
+    transition: .3s; 
+}
+
+footer ul #fouricon:hover {
+    background-position: 0 -378px;
+   
+}
+
+
+footer ul #fiveicon {
+    width: 54px;
+    height: 54px;
+    background-image: url(/stopandcode2/sprite1.png);
+    background-position: 0 -432px;
+    transition: .3s; 
+}
+
+footer ul #fiveicon:hover {
+    background-position: 0 -486px;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+@media screen and (min-width:768px) {
+    
+    aside {
+        width: 49%;
+        margin-right: 1%;
+        
+    }
+
+    section {
+      width: 49%;
+      margin-left: 1%;
+    }
+}
+
+
+@media screen and (min-width:1024px) {
+
+    header {
+        order: 1;
+    }
+
+    article {
+     width: 50%;
+     order: 3;
+    }
+
+    aside {
+
+        width: 24%;
+        order: 2;
+        margin-right: 1%;
+
+    }
+
+    section {
+        width: 24%;
+        order: 4;
+        margin-left: 1%;
+    }
+
+    footer {
+        order: 5;
+    }
+
+}
+
